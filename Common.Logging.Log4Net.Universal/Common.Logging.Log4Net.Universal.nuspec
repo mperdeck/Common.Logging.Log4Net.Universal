@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Common.Logging.Log4Net.Universal</id>
+    <version>1.0.0</version>
+    <authors>mperdeck</authors>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/mperdeck/Common.Logging.Log4Net.Universal</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common Logging Adapter for Log4Net. Unlike Common.Logging.Log4Net1215 etc., this package is not tied to a particular version of Log4Net, so does not need to be upgraded for each new version of Log4Net.</description>
+    <language>en-US</language>
+    <tags>log4net common logging adapter</tags>
+    <dependencies>
+      <dependency id="Common.Logging" version="3.3.1" />
+      <dependency id="Common.Logging.Core" version="3.3.1" />
+      <dependency id="log4net" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="content\app.config.transform" target="content\app.config.transform" />
+    <file src="content\web.config.transform" target="content\web.config.transform" />  	
+  </files>
+</package>

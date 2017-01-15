@@ -15,21 +15,21 @@
 using System;
 using Common.Logging;
 
-namespace Common.Logging.Log4Net
+namespace Common.Logging.Log4Net.Universal
 {
     /// <summary>
     /// Serilog factory adapter.
     /// </summary>
-    public class Log4NetLoggerFactoryAdapter : ILoggerFactoryAdapter
+    public class Log4NetFactoryAdapter : ILoggerFactoryAdapter
     {
         public ILog GetLogger(Type type)
         {
-            return new Log4NetCommonLogger(LogManager.GetLogger(type));
+            return new Log4NetLogger(LogManager.GetLogger(type));
         }
 
         public ILog GetLogger(string name)
         {
-            return new Log4NetCommonLogger(LogManager.GetLogger(name));
+            return new Log4NetLogger(LogManager.GetLogger(name));
         }
     }
 }

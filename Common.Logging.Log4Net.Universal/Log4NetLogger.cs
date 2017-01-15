@@ -17,14 +17,13 @@ using log4net;
 using Common.Logging.Factory;
 using System.Collections.Generic;
 
-namespace Common.Logging.Log4Net
+namespace Common.Logging.Log4Net.Universal
 {
-    /// <summary> Log4Net common logger. </summary>
-    public class Log4NetCommonLogger : AbstractLogger
+    public class Log4NetLogger : AbstractLogger
     {
         private readonly ILog _logger;
 
-        public Log4NetCommonLogger(ILog logger)
+        public Log4NetLogger(ILog logger)
         {
             this._logger = logger;
         }

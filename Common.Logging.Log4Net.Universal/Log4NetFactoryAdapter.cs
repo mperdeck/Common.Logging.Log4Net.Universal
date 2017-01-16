@@ -24,12 +24,12 @@ namespace Common.Logging.Log4Net.Universal
     {
         public ILog GetLogger(Type type)
         {
-            return new Log4NetLogger(LogManager.GetLogger(type));
+            return new Log4NetLogger(log4net.LogManager.GetLogger(type));
         }
 
         public ILog GetLogger(string name)
         {
-            return new Log4NetLogger(LogManager.GetLogger(name));
+            return new Log4NetLogger(log4net.LogManager.GetLogger(name));
         }
     }
 }

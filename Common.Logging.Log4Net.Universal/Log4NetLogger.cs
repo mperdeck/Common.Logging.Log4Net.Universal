@@ -13,17 +13,15 @@
 // limitations under the License.
 
 using System;
-using log4net;
 using Common.Logging.Factory;
-using System.Collections.Generic;
 
 namespace Common.Logging.Log4Net.Universal
 {
     public class Log4NetLogger : AbstractLogger
     {
-        private readonly ILog _logger;
+        private readonly log4net.ILog _logger;
 
-        public Log4NetLogger(ILog logger)
+        public Log4NetLogger(log4net.ILog logger)
         {
             this._logger = logger;
         }
@@ -60,11 +58,12 @@ namespace Common.Logging.Log4Net.Universal
             }
         }
 
+        // Note that log4net ILog interface doesn't have a Trace level
         public override bool IsTraceEnabled
         {
             get
             {
-                return this._logger.IsTraceEnabled;
+                return this._logger.IsDebugEnabled;
             }
         }
 
@@ -84,8 +83,9 @@ namespace Common.Logging.Log4Net.Universal
         {
             switch (level)
             {
+                // Note that log4net ILog interface doesn't have a Trace level
                 case LogLevel.Trace:
-                    _logger.Trace(message, exception);
+                    _logger.Debug(message, exception);
                     break;
                 case LogLevel.Debug:
                     _logger.Debug(message, exception);

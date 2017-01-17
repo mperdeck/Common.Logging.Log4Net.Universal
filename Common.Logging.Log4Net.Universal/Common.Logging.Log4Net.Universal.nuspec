@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Common.Logging.Log4Net.Universal</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>mperdeck</authors>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/mperdeck/Common.Logging.Log4Net.Universal</projectUrl>
@@ -13,7 +13,7 @@
     <dependencies>
       <dependency id="Common.Logging" version="3.3.1" />
       <dependency id="Common.Logging.Core" version="3.3.1" />
-      <dependency id="log4net" version="2.0.0" />
+      <dependency id="log4net" version="2.0.6" />
     </dependencies>
   </metadata>
   <files>

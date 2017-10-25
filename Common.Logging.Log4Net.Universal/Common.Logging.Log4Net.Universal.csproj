@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log4NetGlobalVariablesContext.cs" />
     <Compile Include="Log4NetLogger.cs" />
     <Compile Include="Log4NetFactoryAdapter.cs" />
+    <Compile Include="Log4NetThreadVariablesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
